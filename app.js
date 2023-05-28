@@ -12,14 +12,3 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
-const navbar = document.querySelector('ul');
-const navbarOffsetTop = navbar.offsetTop;
-
-window.addEventListener('scroll', () => {
-  if (window.pageYOffset >= navbarOffsetTop) {
-    navbar.classList.add('sticky');
-  } else {
-    navbar.classList.remove('sticky');
-  }
-});
-
