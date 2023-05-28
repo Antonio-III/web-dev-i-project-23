@@ -4,5 +4,4 @@ School project to develop 5 webpages.
 2 - home.html
 3 - about.html
 4 - nextpage.html
-5 - animation.html 
-6 - bonus.html
+5 - bonus.html
