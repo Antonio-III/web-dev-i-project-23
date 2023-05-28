@@ -112,22 +112,28 @@ li a:hover{
     
 }
 
-.sticky{
+div.third-page {
+    font-size: 30px;
+    min-height: fit-content;
+    display:flex;
+
+}
+
+h1.third-page {
+    font-size: 30px;
     position: sticky;
-    top: 10vh;
-    text-align: left;
+    top:11vh;
 
 }
 
-.thirdpage{
-    display: flex;
-    min-height:fit-content;
+h1container{
+    flex:1;
 }
 
-.thirdpageH1{
-    flex: 1;
+pcontainer{
+    flex:4;
 }
 
-.thirdpageP{
-    flex: 3;
+#lighter-bg{
+    background-color: #1c1c21;
 }

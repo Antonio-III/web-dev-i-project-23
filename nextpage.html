@@ -11,30 +11,150 @@
         <li> <a href="home.html">      Home      </a> </li>
         <li> <a href="about.html">     About     </a> </li>
         <li> <a href="nextpage.html">  Next Page </a> </li>
+        <li> <a href="animation.html"> Animation </a> </li>
         <li> <a href="bonus.html">     Bonus     </a> </li>
 		<li id = "float_right"> Welcome! </li>
 	</ul>
 	
-	<div class="hidden thirdpage">
-		<h1 class ="thirdpageH1"> Brief </h1>
-		<p class ="thirdpageP"> We were tasked to develop 5 webpages using what we’ve learned so far in HTML, CSS, and JS.  </p>
+	<div class="hidden third-page">
+		<h1container> <h1 class ="sticky third-page" id ="lighter-bg"> Brief </h1> </h1container>
+		<pcontainer> <p class ="sticky third-page"> We were tasked to develop 5 webpages using what we’ve learned so far in HTML, CSS, 
+			and JS. 
+		</p> </pcontainer>
 	</div>
 
-	<div class="hidden thirdpage">
-		<h1 class ="thirdpageH1"> This makes each element take up the entire screen </h1>
-		<p class ="thirdpageP"> and more! (because it's 125) </p>
+
+	<div class="hidden third-page">
+		<h1container> <h1 class ="sticky third-page" id ="lighter-bg"> Design Direction </h1> </h1container>
+		<pcontainer> <p class ="sticky third-page"> I chose to make a portfolio-like webpage as I thought it would be a good idea to have
+			this webpage display what I learned in front-end development. Even after the assessment is done, I
+			would continue to update my github with new changes to the webpages, and hopefully, use it in
+			a professional setting.
+		</p> </pcontainer>
 	</div>
 
-	<div class="hidden thirdpage">
-		<h1 class ="thirdpageH1"> The contents of this div are </h1>
-		<p class ="thirdpageP"> the text you're seeing </p>
+	<h1 id ="lighter-bg"> Technical Description </h1>
+
+	<div class="hidden third-page">
+		<h1container> <h1 class ="third-page"> HTML </h1></h1container>
+		<pcontainer><p class ="sticky third-page"> I saw a youtube video that caught my attention. The video in question was about 
+			making a simple animation to occur while scrolling down. This inspired the skeleton of the HTML, CSS,
+			and JS to what it is now. <br><br>
+
+			The webpage begins with a navigation bar at the top, as most websites do. What’s different
+			about this nav bar is that it sticks to the top of the page at all times, meaning that it sticks at the
+			top of the page even if the user is scrolling down. <br><br>
+
+			The body is separated into different section but they’re called div in the project. Each div
+			has a height of 125vh (viewport height). This means every one of the div fills up the entire
+			browser’s screen space and 25% more on top of that. Within every div has different contents,
+			whether it be texts or images or even background images. This goes on for 5 pages. <br><br>
+
+			And the first one being the “login” page. It is originally supposed to be a .php site, where it takes
+			the user’s name and displays the name on the right side of the nav bar, as if giving the user a
+			welcome message. But instead, for html, the login page just has an input type = “text" and an
+			input type = “submit” element, and they aren’t used practically as part of the user experience.
+			But the virtue of having those elements present shows that we have applied one of the things
+			we’ve learned, which is having an input element somewhere along the 5 pages.
+			
+		</p> </pcontainer>
 	</div>
 
-	<div class="hidden thirdpage">
-		<h1 class ="thirdpageH1"> There's a lot of spaces in between them </h1>
-		<p class ="thirdpageP"> which is part of the div </p>
+	<div class="hidden third-page">
+		<h1container><h1 class ="sticky third-page"> CSS </h1></h1container>
+		<pcontainer><p class ="sticky third-page"> It begins by importing a google font called “poppins” which is the font present 
+			across all the webpages. Every content inside the div has texts in the center. The nav bar has the same
+			color as the background, but lighter so as to differentiate the two.When any items on the navbar are hovered, it changes 
+			color to clearly indicate that it’s a clickable element. <br><br>
+
+			There are two classes that are actively being used by most if not every text element in the
+			webpage, those being the hidden and show classes. Hidden, as the name suggests, hides the
+			element in the webpage by reducing its opacity to 0. Show, much the same as the name
+			suggests by changing the opacity back to 1. These transitions all happen within 1 second, so
+			the user can see the effect of the classes. <br><br>
+			
+			I’ve also added a transform property where the hidden class starts at the very edge of the
+			screen. This is done by writing: transform:translateX(-100%). It changes the X position of the
+			element to -100%. Think of it like a string of numbers from -100 to 100. At the very center will be
+			0, whereas -100 will be at the left end of the string. The Show class sets the transform value to
+			translateX(0). When this is all done in a span of 1 second, the effect intended will be the texts
+			flying from the left side, then stopping at the center, while being invisible to visible.
+			It also uses a blur effect while hidden, and removes the effect when shown. <br><br>
+
+			For the nav bar sticking at the top, the ul element has a position: sticky in its selector. This
+			is so that when the user has scrolled further down than the element’s original position, it will
+			decide to stick on the page, following the user. This stops at the end of that container, in this
+			case, the container is body, so the nav bar can follow you until the bottom of the page. But if I
+			create a div and inside that div, a p with position: sticky, and a text inside it, the contents
+			of the p element will follow the user until the edge of the div container. <br><br>
+
+			There is a section in one of the webpages where a background image was used. This is done
+			through using the background-image and background-size property. All you have to do is to
+			create a class for that container, then in the class selector, write url(“image.png”), and cover
+			as their values, respectively. <br><br>
+ 
+			The background images’ heights are set to 200vh as the div is only 125vh which isn’t enough
+			to show the entire image. This is because if you set the background size to cover, the image
+			will stretch out to fit the container’s size, that being 125vh, and it does it proportionally, meaning
+			if the height of an image is set to a certain size, so will the width, and vice-versa.
+			The problem here however, is that the height of the image is larger than the height of the
+			container, causing it to block certain parts of the image, whether that be the top half, or bottom
+			half, which is why I’ve increased the height of the container so it can hopefully match the
+			image’s.
+			
+		</p> </pcontainer>
 	</div>
-	
+
+	<div class="hidden third-page">
+		<h1container><h1 class ="sticky third-page"> Javascript </h1></h1container>
+		<pcontainer><p class ="sticky third-page"> For JS, I’ve only coded it for the hidden and show class, where I used an
+			IntersectionObserver constructor and assigned it into a constant named observer. It has a
+			callback function that executes when an observed element intersects with the viewport.
+			Then inside it, it iterates over each entry (element) in the array. After that, it has a conditional
+			statement that checks if the entry is intersecting with the viewport or not. If the entry intersects
+			with the viewport, it adds a class show to the element’s classList. If it’s not intersecting, it
+			removes the class show. <br><br>
+
+			I then make a line of code that selects all the elements with the class called hidden, and store it
+			in a variable called hiddenElements. Then another line where it iterates over each element in
+			hiddenElements’ NodeList using the method forEach(). The observe() method of
+			IntersectionOberserver is then called with the element as the argument which would be like:
+			observe(div class = “hidden”). When the element div enters or exits the viewport, the
+			callback function provided to the IntersectionObserver constructor will be invoked.
+		</p> </pcontainer>
+	</div>
+
+	<div class="hidden third-page">
+		<h1container><h1 class ="sticky third-page"> Critical Reflection </h1></h1container>
+		<pcontainer><p class ="sticky third-page"> I think this project was cool. Making it was a lot of fun. I learned a ton of new 
+			things about front-end development. Something I didn’t understand that much would be the syntax and
+			anything related to Javascript. I don’t really know anything about this programming language as
+			of now, so I had to settle with a simple mechanic as a stepping stone for now. <br><br>
+
+			What’s really cool about this project is that the way it displays the contents is very smooth. And
+			the background images and images add taste to the webpage as a whole. It really is one of the
+			webpages of all time. <br><br>
+
+			Things that could be improved are things like adding more content into the web page, since as
+			of now, it has very little content available in it. It only has pictures and texts in it, but I plan on
+			adding more things I learn to the webpage, so there’s a chance that I might update the Github
+			files long after I’ve submitted this project. <br><br>
+
+			For these things to happen I need to learn new concepts in css like which properties I could
+			manipulate and what do the properties do. I would also need to learn more about Javascript and
+			what It could do in HTML. As for HTML, I probably need to learn more about conventional use of
+			elements because I failed to do that in this project, and that is when I used a  instead of. 
+			That could definitely be improved. <br><br>
+
+			Overall, I think I need to familiarize myself with certain CSS design tricks and a whole lot of JS
+			interactions with CSS. This would include the functions, methods, constructors and whatever
+			else. Only then will I understand the world of front-end development. <br><br>
+		</p> </pcontainer>
+	</div>
+
+
+
+
 	<script defer src="app.js"></script>
 </body>
 </html>
