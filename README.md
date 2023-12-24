@@ -1,7 +1,7 @@
 # webproject
 School project to develop 5 webpages. 
 
-1 - html_form.html
+1 - index.html (XAMPP form but it doesn't work on github)
 
 2 - home.html
 
